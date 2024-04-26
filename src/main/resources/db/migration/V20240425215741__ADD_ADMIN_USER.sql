@@ -1,0 +1,1 @@
+insert into user_(username , password , title ) values ('admin' , 'admin' , 'administrator')
