@@ -18,7 +18,7 @@ import org.springframework.util.CollectionUtils;
 @Table(name = "user_")
 @SQLDelete(sql = "update user_ set deleted = 1 where id = ?")
 @Where(clause = "deleted = false")
-public class User extends Auditable<Integer> {
+public class User extends Auditable<Integer , Integer> {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
