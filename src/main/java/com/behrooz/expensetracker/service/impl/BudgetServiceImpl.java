@@ -49,8 +49,8 @@ public class BudgetServiceImpl implements BudgetService {
   @Override
   public Budget save(BudgetRegisterRequest registerRequest) {
     if (registerRequest == null
-        || DateUtil.isValidateDate(registerRequest.getStartDate())
-        || DateUtil.isValidateDate(registerRequest.getEndDate())
+        || !DateUtil.isValidateDate(registerRequest.getStartDate())
+        || !DateUtil.isValidateDate(registerRequest.getEndDate())
         || registerRequest.getAmount() == null
         || registerRequest.getThresholdAmount() == null
         || registerRequest.getCategoryId() == null) throw new InvalidParameterException();

@@ -47,7 +47,7 @@ public class PaymentMethodServiceImpl implements PaymentMethodService {
     PaymentMethod paymentMethod = new PaymentMethod();
     paymentMethod.setName(request.getName());
     paymentMethod.setDescription(request.getDescription());
-    paymentMethod.setProvider(paymentMethod.getProvider());
+    paymentMethod.setProvider(request.getProvider());
     return repository.save(paymentMethod);
   }
 
